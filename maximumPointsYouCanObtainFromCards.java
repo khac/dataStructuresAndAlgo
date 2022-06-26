@@ -3,14 +3,14 @@
 
 import java.util.Arrays;
 
-class maximumPointsYouCanObtainFromCards {
+class maxPmaximumPointsYouCanObtainFromCards {
     public static void main (String[] args) {
-        System.out.println(maximumPointsYouCanObtainFromCards(new int[]{1,2,3,4,5,6,1}, 3));
-        System.out.println(maximumPointsYouCanObtainFromCards(new int[]{2,2,2}, 2));
-        System.out.println(maximumPointsYouCanObtainFromCards(new int[]{9,7,7,9,7,7,9}, 7));
+        System.out.println(maxP(new int[]{1,2,3,4,5,6,1}, 3));
+        System.out.println(maxP(new int[]{2,2,2}, 2));
+        System.out.println(maxP(new int[]{9,7,7,9,7,7,9}, 7));
     }
 
-    public static int maximumPointsYouCanObtainFromCards(int[] cardPoints, int k) {
+    public static int maxP(int[] cardPoints, int k) {
         if(k == cardPoints.length) {
             return Arrays.stream(cardPoints).reduce(0, (a, b) -> a+b);
         }
